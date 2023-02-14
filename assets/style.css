@@ -190,7 +190,7 @@ html, body {
 }
 .icBox img{
   display: block;
-  width: 97px;
+  width: 80px;
   margin:0 auto;
 }
 .icTxt {
@@ -872,12 +872,11 @@ button.button {
 }
 
 
-/* 모달7 (휴지통) */
+/* 모달7 (플레이리스트) */
 .modal7Box {
   position: absolute;
-  left: 50%;
-  top: -50vh;
-  transform: translateX(-50%);
+  right: 1rem;
+  top: 2rem;
   border:3px solid #000;
   border-style: outset;
   width: 100%;
@@ -888,355 +887,95 @@ button.button {
   padding: 5px 5px 10px 5px;
   /*overflow: hidden;*/
 }
-.modal7Box .modalDeco:nth-child(1){
-  position: absolute;
-  top:-87px;
+.listWrap { 
+  padding: 0 10px;
 }
-.modal7Box .modalDeco:nth-child(2){
-  position: absolute;
-  bottom:1px;
-  right: 30px
-}
-.modal7Box .modalDeco:nth-child(3){
-  position: absolute;
-  bottom:-66;
-  right: -62px;
-  z-index: -10;
-}
-.modal7Box .modal7ContWrap {
-  overflow: hidden;
-  height: 260px;
-  padding-bottom: 15px;
-} 
-.modal7Box .modal7ContWrap .modal7Cont {
-  height: 100%;
-  border:2px solid #000;
-  margin-top:10px;
-  border-radius: 5px;
-  background-color:#f59097;
-}
-
-/* 쪽지 알람 모달 */
-.buddyAlarm {
-    display: none;
-    position: absolute;
-    right:5px;
-    bottom:-45px;
-  }
-.buddyAlarm img {
-  display: block;
-  position:relative;
-}
-.showBuddy {
-  display: block;
-  right:5px;
-  bottom:48px;
-  animation: fadeInUp 2s;
-}
-@keyframes fadeInUp {
-  0% {
-      opacity: 0;
-      transform: translate3d(0, 100%, 0);
-  }
-  to {
-      opacity: 1;
-      transform: translateZ(0);
-  }
-}
-
-
-/* 쪽지 내용 모달 */
-.buddyBuddy {
+.listWrap .listImg {
+  border: 3px solid #000;
+  margin-top: 10px;
   width: 100%;
-  max-width:600px;
-  position:absolute;
-  left: 50%;
-  top: -50vh;
-  transform: translateX(-50%);
-  border:3px solid #000;
+  box-sizing: border-box;
   border-radius: 5px;
-  padding:2px;
-  background-color:#ebe1d8;
-  box-shadow: 5px 5px #000;
 }
-.buddyBox {
-  width:100%;
-}
-.buddyCont { 
-  border:2px solid #000;
-  background-color:#ebb436;
-  border-radius: 5px;
-  padding:40px 5px 5px 5px;
-  margin-top:3px;
-}
-.buddyMain {
-  background-color:#fff;
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border:2px solid #000;
-  padding:5px;
-}
-.buddyMainText {
-  border-radius: 10px;
-  padding:5px;
-  display: flex;
-  width:100%;
-  box-sizing: border-box;
-}
-.maintextLeft {
-  width: 58%;
-  margin-right: 2%;
-  border-radius: 15px;
-  background-color:#eb6134;
-  border:2px solid #000;
-}
-.maintextRight {
-  width:40%;
-  border:2px solid #000;
-  border-radius: 15px;
-  background-color: #ebe1d8;
-  padding:5px;
-  box-sizing: border-box;
-}
-.textleftTop {
-  padding:9px;
-  height: 30px;
-  box-sizing: border-box;
-}
-.textleftCont {
-  background-color:#ebe1d8;
-  border-top:2px solid #000;
-  border-bottom:2px solid #000;
-  padding:20px 10px;
-  box-sizing: border-box;
-}
-.textleftCont p {
-  height: 100px;
-  padding:10px;
-}
-.textleftBottom {
-  padding:7px 10px 5px 10px;
-  display: flex;
-  justify-content: space-between;
-}
-.textleftBottom span.border {
-  padding: 10px 8px 5px 8px;
-  border: 2px solid #000;
-  border-radius: 5px;
-  background-color: #fef6d3;
-  line-height: 28px;
-  font-size:14px; 
-  font-weight: bold;
-  box-shadow: 2px 2px #000;
-}
-.textleftBottom span img {
-  width: 100%;
-  max-width: 23px;
-}
-.maintextRight .textrightDiv {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-.maintextRight .textrightDiv img {
-  position: absolute;
-  top:50%;
-  left:50%;
-  transform: translate(-50%, -50%);
-  overflow: hidden;
+.listWrap .listImg img {
   display: block;
   width: 100%;
-  max-width: 200px;
   border-radius: 5px;
 }
-.buddyTab { 
-  position:absolute; 
-  left:9px; 
-  top:49px;
-  background-color:#fff;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  padding:7px 10px 5px 5px;
-  font-weight: bold;
-  border-top:2px solid #000;
-  border-right:2px solid #000;
-  border-left:2px solid #000;
+.listWrap .listCont {
+  margin-top:15px;
 }
-.buddyTab img {
-  width: 15px;  
-  display: inline-block;
-  vertical-align: middle;
-}
-
-/* 버디버디 자기소개 */
-.buddyAboutMe{
-  width:600px;
-  position:absolute;
-  top:50px;
-  right:50px;
-  border:3px solid #000;
-  border-radius: 5px;
-  background-color:#ebe1d8;
-  padding:2px;
-  box-shadow: 5px 5px #000;
-}
-.aboutmeCont .contTop {
-  background-color:#ebb436;
-  border:2px solid #000;
-  border-radius: 5px;
-  padding:5px;
-  margin-top:3px;
-  display: flex;
-  justify-content: space-between;
-}
-.aboutmeCont .contTop .left {
-  height: 25px;
-  box-sizing: border-box;
-  padding-top:3px;
-}
-.aboutmeCont .contTop .left img {
-  display: inline-block;
-  width: 18px;
-}
-.aboutmeCont .contTop .left span { 
-  display: inline-block;
-  color:#000;
-  font-weight: bold;
-  vertical-align: 5px;
-}
-.aboutmeCont .contTop .right ul {
-  display: flex;
-  margin-top: 5px;
-}
-.aboutmeCont .contTop .right ul li {
-  color:#000;
+.listWrap .listCont p {
+  font-size: 17px;
   font-weight: bold;
 }
-.aboutmeCont .contTop .right ul li:first-child {
-  margin-right: 10px;
+.listWrap .listCont .statusBox {
+  margin-top:6px;
 }
-.aboutmeCont .contTop .right ul li:nth-child(2){ 
-  width: 1px; 
-  height: 15px;
+.listWrap .listCont .statusBox .bar {
+  width: 100%;
+  height: 3px;
   background-color:#000;
-  margin-right: 10px;
 }
-.aboutmeCont .contMid {
-  background-color:#fef6d3;
-  margin-top:3px;
-  padding:5px;
+.listWrap .listCont .statusBox .dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
   border:2px solid #000;
-  border-radius: 5px;
-  display: flex;
+  background-color:cornflowerblue;
+  margin-top:-6px;
+  margin-left: 90%;
 }
-.aboutmeCont .contMid .left{ 
-  width: 58%;
-  margin-right: 2%;
-}
-.aboutmeCont .contMid .right{ 
-  width: 40%;
-  border:2px solid #000;
-  box-sizing: border-box;
-}
-.contMid .left .questBox1 ul {
-  display: flex;
-}
-.aboutmeCont .contMid .left .questBox1 li.aboutmeQuestion {
-  display: inline-block;
-  margin-right: 11px;
-  margin-top:5px;
-  line-height: 24px;
-}
-.aboutmeCont .contMid .left .questBox1 li.aboutmeQuestion span,
-.contMid .left .questBox2 ul li span{
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  border:2px solid #000;
-  border-radius: 50%;
-  background-color:#eb6134;
-  vertical-align: middle;
-}
-.aboutmeCont .contMid .left .questBox1 li.aboutmeAnsewer {
-  background-color:#fff;
-  border:2px solid #000;
-  display: block;
-  box-sizing: border-box;
-  width:76.2%;
-  padding-top:5px;
-}
-.aboutmeCont .contMid .right div { 
-  box-sizing: border-box;
+.listWrap .listCont .statusBox div:nth-child(3) {
+  margin-top:2px;
   width: 100%;
-  height: 100%;
-  background-color:#fff;
-  padding:10px;
-  position:relative;
-}
-.aboutmeCont .contMid .right img{
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 209px;
-  top:15%;
-  position: absolute;
-  border:2px solid #000;
-}
-.contMid .left .questBox2 {
   display: flex;
   justify-content: space-between;
+}
+.listWrap .listCont .statusBox div:nth-child(3) > p {
+  font-size: 14px;
+}
+.listWrap .listCont .statusBox div:nth-child(4) {
+  width: 100%;
+  box-sizing: border-box;
   margin-top:5px;
-}
-.contMid .left .questBox2 ul{
-  width: 50%;
-  display: flex;
-  margin-right: -15px;
-}
-.contMid .left .questBox2 ul li:first-child {
-  margin-right: 5px;
-  margin-top:5px;
-  line-height: 24px;
-}
-.contMid .left .questBox2 ul li:last-child{
-  background-color:#fff;
-  border:2px solid #000;
-  width:53%;
-  padding-top:5px;
-  line-height: 24px;
-}
-.contMid .left .questBox3 ul {
   display: flex;
   justify-content: space-between;
-  margin-top:20px;
-  border-top: 2px solid #000;
-  border-top-style: inset;
-  padding-top:20px;
 }
-.aboutmeCont .contMid .left .questBox3 li:first-child{
-  display: inline-block;
-  margin-right: 11px;
+.listWrap .listCont .statusBox div:nth-child(4) > img {
+  width: 20px;
+  display: block;
 }
-.aboutmeCont .contMid .left .questBox3 li:last-child{
-  color:#000;
-  font-weight: bold;
-  border-bottom: 1px solid #000;
-
+.listWrap .listCont .statusBox div:nth-child(4) img:nth-child(1) {
+  transform: rotate(-180deg);
 }
-.aboutmeCont .contMid .left .questBox3 p {
-  background-color:#fff;
-  margin-top:5px;
-  border:2px solid #000;
-  width: 100%;
-  height: 160px;
-  overflow-y: scroll;
-  padding:5px;
+.listWrap .listCont .statusBox ul {
+  margin-top: 15px;
+  display: flex;
+  justify-content: right;
   box-sizing: border-box;
 }
-
-.buddyModal {
-  width: 100%;
-  height: 100%;
+.listWrap .listCont .statusBox ul li:first-child {
+  margin-right: 20px;
+  border:2px solid #000;
+  padding:2px 15px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.listWrap .listCont .statusBox ul li:last-child {
+  color:#fff;
+  background-color:#106a3a;
+  border: 2px solid #106a3a;
+  padding:2px 15px;
+  border-radius: 15px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.listWrap .listCont .statusBox ul li:last-child:hover{
+  color:#106a3a;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: transparent;
 }
 
 

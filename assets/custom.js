@@ -31,9 +31,6 @@
 // chargeLoading()
 // setInterval(chargeLoading, 5000)
 
-
-
-
 // 시계
 const clock = document.getElementById("clock");
 function getClock() {
