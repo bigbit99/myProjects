@@ -1,44 +1,48 @@
-html, body {
+html,
+body {
   width: 100vw;
   height: 100vh;
 }
 
 /* 로딩 */
 .loaderWrap {
-  position:fixed;
-  top:0; left:0;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background-color : #ebe1d8;
+  background-color: #ebe1d8;
   z-index: 9999;
   opacity: 1;
-  transition: 0.5s ease; 
+  transition: 0.5s ease;
 }
 .loader {
   position: absolute;
-  top:50%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.loader p.waivy{
+.loader p.waivy {
   text-align: center;
 }
-.loader .waivy span{
+.loader .waivy span {
   font-family: 'Fredoka One', cursive;
   display: inline-block;
   font-size: 20px;
-  color:#000;
+  color: #000;
   text-align: center;
   vertical-align: middle;
   animation: waviy 1s infinite;
-  animation-delay: calc(.1s * var(--i));
+  animation-delay: calc(0.1s * var(--i));
 }
 @keyframes waviy {
-  0%,40%,100% {
-    transform: translateY(0)
+  0%,
+  40%,
+  100% {
+    transform: translateY(0);
   }
   20% {
-    transform: translateY(-7px)
+    transform: translateY(-7px);
   }
 }
 
@@ -47,8 +51,8 @@ html, body {
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  margin-top:20px;
-  background-color:#ebcb87;
+  margin-top: 20px;
+  background-color: #ebcb87;
   border: 2px solid #000;
   border-radius: 5px;
   width: 300px;
@@ -59,15 +63,15 @@ html, body {
 .loadBar {
   display: none;
   position: absolute;
-  top:50%;
+  top: 50%;
   left: 0;
   margin-left: auto;
   margin-right: auto;
   transform: translateY(-50%);
-  background-color:#eb6134;
+  background-color: #eb6134;
   width: 30px;
   height: 30px;
-  border:2px solid #000;
+  border: 2px solid #000;
   box-shadow: 1px 1px #000;
   border-radius: 5px;
   box-sizing: border-box;
@@ -106,49 +110,47 @@ html, body {
 }
 
 /* 스크롤바 */
-.scroll1{
-    width: 340px;
-    height: 100%;
-    overflow-y: scroll;
-    box-sizing: border-box;
-    
+.scroll1 {
+  width: 340px;
+  height: 100%;
+  overflow-y: scroll;
+  box-sizing: border-box;
 }
 
 /* 스크롤바 설정*/
-.scroll1::-webkit-scrollbar{
-    width: 15px;
-    background-color: #ebe1d8;
-    border-left:2px solid #000;
-    
+.scroll1::-webkit-scrollbar {
+  width: 15px;
+  background-color: #ebe1d8;
+  border-left: 2px solid #000;
 }
 /* 스크롤바 막대 설정*/
-.scroll1::-webkit-scrollbar-thumb{
-    background-color:#ebe1d8;
-    border-left:2px solid #000;
-    background-color:#ebcb87;
-    border-bottom: 2px solid #000;
-    border-top: 2px solid #000;
-    border-radius: 30px;
+.scroll1::-webkit-scrollbar-thumb {
+  background-color: #ebe1d8;
+  border-left: 2px solid #000;
+  background-color: #ebcb87;
+  border-bottom: 2px solid #000;
+  border-top: 2px solid #000;
+  border-radius: 30px;
 }
 /* 스크롤바 뒷 배경 설정*/
-.scroll1::-webkit-scrollbar-track{
-     background-color: #ebe1d8;
-     border-left: 2px solid #000;
-     padding:0 5px;
+.scroll1::-webkit-scrollbar-track {
+  background-color: #ebe1d8;
+  border-left: 2px solid #000;
+  padding: 0 5px;
 }
 .scroll1::-webkit-scrollbar-button:start:decrement {
-  display:block;
-  height:15px;
+  display: block;
+  height: 15px;
   border-bottom: 2px solid #000;
 }
 .scroll1::-webkit-scrollbar-button:end:increment {
-  display:block;
-  height:15px;
+  display: block;
+  height: 15px;
   border-top: 2px solid #000;
-} 
+}
 
 /* 레이아웃 */
-#wrap{
+#wrap {
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -160,7 +162,7 @@ html, body {
 #wrap div.modalWrap {
   position: absolute;
   right: 0;
-  top:0;
+  top: 0;
   width: calc(100% - 315px);
   height: calc(100% - 45px);
   min-height: 900px;
@@ -188,10 +190,10 @@ html, body {
   max-width: 105px;
   margin-bottom: 10px;
 }
-.icBox img{
+.icBox img {
   display: block;
   width: 80px;
-  margin:0 auto;
+  margin: 0 auto;
 }
 .icTxt {
   display: block;
@@ -199,60 +201,60 @@ html, body {
   text-align: center;
   font-family: 'KorailRoundGothicBold';
   font-weight: 700;
-  background-color:#ebe1d8;
-  border:2px solid #000;
+  background-color: #ebe1d8;
+  border: 2px solid #000;
   border-radius: 7px;
-  padding:4px 0 2px 0;
-  color:#000;
-  font-size:16px;
+  padding: 4px 0 2px 0;
+  color: #000;
+  font-size: 16px;
 }
 
 /* -----푸터----- */
-.botBar { 
+.botBar {
   position: absolute;
-  bottom:0;
+  bottom: 0;
   left: 0;
-  width: 100%; 
-  background-color:#ebe1d8;
-  border-top:2px solid #000;
+  width: 100%;
+  background-color: #ebe1d8;
+  border-top: 2px solid #000;
   border-bottom: 2px solid #000;
   border-bottom-style: inset;
-  height: 40px;  
+  height: 40px;
 }
-.botBtn { 
+.botBtn {
   font-family: 'KorailRoundGothicBold';
   font-weight: 700;
   text-align: right;
   font-size: 17px;
   line-height: -1px;
-  width: 85px; 
+  width: 85px;
   height: 32px;
-  padding:2px 6px 2px 2px;
-  margin-top:4px;
+  padding: 2px 6px 2px 2px;
+  margin-top: 4px;
   margin-left: 2px;
-  background-color:#ebcb87;
-  border:2px solid #000;
+  background-color: #ebcb87;
+  border: 2px solid #000;
   border-radius: 5px;
   box-shadow: 1px 1px #000;
-  color:#000;
+  color: #000;
 }
-.imgWindow { 
+.imgWindow {
   width: 25px;
   position: absolute;
   left: 12;
-  top:11;
+  top: 11;
 }
-.botClock { 
+.botClock {
   font-family: 'KorailRoundGothicBold';
   font-weight: 700;
   text-align: right;
   width: 180px;
   height: 32px;
   list-style: 32px;
-  position:absolute;
+  position: absolute;
   right: 3px;
-  top:2;
-  border:2px solid #000;
+  top: 2;
+  border: 2px solid #000;
   box-shadow: 1px 1px #000;
   display: flex;
   flex-wrap: wrap;
@@ -261,20 +263,22 @@ html, body {
   padding: 0 7px;
   border-radius: 5px;
 }
-.clockTxt{ 
+.clockTxt {
   text-align: right;
   margin-right: 5px;
   margin-left: 10px;
 }
-.botIcon { 
-  display:block;
+.botIcon {
+  display: block;
   width: 25px;
 }
-.botIcon img { width: 100%;}
+.botIcon img {
+  width: 100%;
+}
 
 /* -----모달----- */
-.modal{
-  position:inherit;
+.modal {
+  position: inherit;
 }
 
 /* 모달1 (컴퓨터) */
@@ -283,38 +287,38 @@ html, body {
   left: 0;
   top: 20px;
   /* transform: translateX(-50%); */
-  border:3px solid #000;
+  border: 3px solid #000;
   width: 100%;
-  max-width: 360px;
-  background-color:#ebe1d8;
+  max-width: 600px;
+  background-color: #ebe1d8;
   box-shadow: 5px 5px #000;
   border-radius: 5px;
   padding: 5px 5px 10px 5px;
   overflow: hidden;
   box-sizing: border-box;
 }
-.modal1Box .resumeBox{
+.modal1Box .resumeBox {
   height: 300px;
-  border:2px solid #000;
+  border: 2px solid #000;
   border-radius: 5px;
-  margin-top:10px;
-  margin-bottom:10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .resumDownload {
   width: 80px;
   margin: 0 auto;
-  background-color:#ebb436;
-  border:2px solid #000;
+  background-color: #ebb436;
+  border: 2px solid #000;
   border-radius: 5px;
   box-shadow: 2px 2px #000;
   padding: 0px 20px;
 }
-.resumDownload p{
+.resumDownload p {
   text-align: center;
   display: block;
   font-size: 18px;
   font-weight: bold;
-  margin-top:5px;
+  margin-top: 5px;
 }
 
 /* 모달2 (이메일) */
@@ -323,10 +327,10 @@ html, body {
   right: 10px;
   top: 20px;
   /* transform: translateX(-50%); */
-  border:3px solid #000;
+  border: 3px solid #000;
   width: 100%;
   max-width: 360px;
-  background-color:#ebe1d8;
+  background-color: #ebe1d8;
   box-shadow: 5px 5px #000;
   border-radius: 5px;
   box-sizing: border-box;
@@ -334,36 +338,36 @@ html, body {
 .modalTopSkew {
   width: 100%;
 }
-.modalTopSkew .skewTab { 
+.modalTopSkew .skewTab {
   display: flex;
   justify-content: space-between;
 }
 .modalTopSkew .skewTab .tabBox {
-    position: relative;
+  position: relative;
 }
 .modalTopSkew .skewTab .tabBox ul {
   display: flex;
   width: 300px;
-  height: 30px; 
+  height: 30px;
   overflow-x: hidden;
 }
 .modalTopSkew .skewTab .tabBox ul li:nth-child(1) {
-  background-color:#eb6134;
+  background-color: #eb6134;
   width: 60%;
   margin-left: -20px;
-  transform: skew( 25deg);
+  transform: skew(25deg);
   border-right: 3px solid #000;
   overflow: hidden;
 }
 .modalTopSkew .skewTab .tabBox ul li:nth-child(2) {
-  background-color:#f0a267;
+  background-color: #f0a267;
   width: 30%;
   transform: skewX(25deg);
   border-right: 3px solid #000;
   border-bottom: 3px solid #000;
 }
 .modalTopSkew .skewTab .tabBox ul li:nth-child(3) {
-  background-color:#ebcb87;
+  background-color: #ebcb87;
   width: 10%;
   font-size: 20px;
   font-weight: bold;
@@ -376,7 +380,7 @@ html, body {
   font-weight: bold;
   position: absolute;
   right: 21px;
-  top:2px; 
+  top: 2px;
 }
 .modalTopSkew .skewTab .btnBox {
   margin-top: 5px;
@@ -385,69 +389,69 @@ html, body {
 .modalTopSkew .lineTab {
   display: flex;
   width: 100%;
-  background-color:#eb6134;
+  background-color: #eb6134;
   width: 100%;
   height: 30px;
-  border-top:3px solid #000;
+  border-top: 3px solid #000;
   border-bottom: 3px solid #000;
-  margin-top:-3px;
+  margin-top: -3px;
   padding: 2px 5px 2px 10px;
   box-sizing: border-box;
 }
 .modalTopSkew .lineTab .iconArea {
-  width:25%;
+  width: 25%;
 }
 .modalTopSkew .lineTab .iconArea img {
   width: 15px;
-  margin-top:3px;
+  margin-top: 3px;
   margin-right: 5px;
 }
 .modalTopSkew .lineTab .adressArea {
   width: 65%;
-  background-color:#fff;
-  border:3px solid #000;
+  background-color: #fff;
+  border: 3px solid #000;
   border-radius: 20px;
 }
-.modalTopSkew .lineTab .starArea{
+.modalTopSkew .lineTab .starArea {
   width: 15%;
 }
-.modalTopSkew .lineTab .starArea img{
+.modalTopSkew .lineTab .starArea img {
   width: 20px;
-  margin:0 auto;
+  margin: 0 auto;
   display: block;
 }
 .modal2Box .gform {
-  border: 2px solid #000; 
+  border: 2px solid #000;
   border-radius: 5px;
-  margin:10px;
-  background-color:#ebcb87;
+  margin: 10px;
+  background-color: #ebcb87;
   overflow-y: scroll;
   height: 400px;
 }
 .modal2Box .gform .fieldsetBox {
-  padding:15px;
+  padding: 15px;
 }
 .modal2Box .gform .fieldsetBox fieldset {
   font-weight: bold;
-  border:none;
+  border: none;
   padding: 5px 0;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
 }
-.modal2Box .gform .fieldsetBox fieldset label{
+.modal2Box .gform .fieldsetBox fieldset label {
   width: 15%;
   margin-top: 10px;
 }
-.modal2Box .gform .fieldsetBox fieldset input, 
+.modal2Box .gform .fieldsetBox fieldset input,
 .modal2Box .gform .fieldsetBox fieldset textarea {
   background-color: inherit;
   border: 2px solid #000;
-  padding:6px 0 0 10px;
+  padding: 6px 0 0 10px;
   border-radius: 10px;
   font-size: 17px;
   width: 92%;
-} 
+}
 .sendBtn {
   padding: 10px 20px 5px 20px;
   background-color: #ebe1d8;
@@ -460,28 +464,29 @@ html, body {
 }
 .sendBtn i {
   font-weight: bold;
-  font-size:18px;
+  font-size: 18px;
 }
 .thankyou_message {
   text-align: center;
   margin-top: -10px;
   margin-bottom: 10px;
 }
-.thankyou_message img { width: 20px;}
-
+.thankyou_message img {
+  width: 20px;
+}
 
 /* 모달3 (내문서) */
-.modal3Box { 
+.modal3Box {
   position: absolute;
   right: 18%;
   top: 51vh;
-  border:3px solid #000;
+  border: 3px solid #000;
   border-radius: 5px;
   padding: 2px;
   width: 100%;
   max-width: 420px;
   min-height: 100px;
-  background-color:#ebe1d8;
+  background-color: #ebe1d8;
   box-shadow: 5px 5px #000;
   box-sizing: border-box;
 }
@@ -489,19 +494,19 @@ html, body {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding:5px;
+  padding: 5px;
   border: 2px solid #000;
   border-radius: 5px;
   background-color: #1d8ebf;
   box-sizing: border-box;
 }
-.modalTop p img { 
+.modalTop p img {
   width: 17px;
   display: inline-block;
   vertical-align: middle;
 }
 .modalTop p {
-  color:#000;
+  color: #000;
   line-height: 18px;
   font-size: 14px;
   font-weight: bold;
@@ -509,64 +514,65 @@ html, body {
 .btnBox {
   display: flex;
 }
-.btnBox button{
+.btnBox button {
   display: block;
   text-align: center;
-  width: 17px; height: 17px;
+  width: 17px;
+  height: 17px;
   margin-right: 2px;
 }
 .btnBox button img {
   width: 100%;
   transition: 0.3s;
-  background-color:#ebe1d8;
+  background-color: #ebe1d8;
 }
 .btnBox button.closeBtn:hover img {
-  background-color:transparent;
+  background-color: transparent;
   transform: scale(1.2);
-  box-shadow: rgb(0,0,0,0.5);
+  box-shadow: rgb(0, 0, 0, 0.5);
   cursor: pointer;
 }
 .modalMid {
   width: 100%;
   height: 28px;
-  background-color:#c0c0c0;
+  background-color: #c0c0c0;
   display: flex;
   justify-content: space-between;
-  border:2px solid #000;
+  border: 2px solid #000;
   border-radius: 5px;
-  margin-top:5px;
+  margin-top: 5px;
   box-sizing: border-box;
 }
-.modalMid .midLeft { 
+.modalMid .midLeft {
   display: flex;
 }
 .modalMid .leftSpan {
   display: block;
-  padding:5px 10px; 
+  padding: 5px 10px;
   line-height: 17px;
   text-align: center;
-  font-size:13px;
+  font-size: 13px;
 }
-.modalMid .leftSpan .spanLine { 
+.modalMid .leftSpan .spanLine {
   display: inline-block;
   border-bottom: 1px solid #000;
   line-height: 10px;
 }
 .modalMid .rightSpan {
   display: block;
-  background-color:#000;
-  height:100%;
-  padding:0 30px;
+  background-color: #000;
+  height: 100%;
+  padding: 0 30px;
 }
 .modalMid .rightSpan img {
-  width: 20px;  
+  width: 20px;
   margin: 4px auto;
   vertical-align: middle;
 }
-.modalBot .modbotInner { 
+.modalBot .modbotInner {
   width: 100%;
   display: flex;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   padding: 20px;
   overflow: hidden;
   box-sizing: border-box;
@@ -578,11 +584,11 @@ html, body {
   text-align: center;
   text-overflow: ellipsis;
   overflow: hidden;
-  white-space:nowrap;
+  white-space: nowrap;
 }
 .modalBot .modbotInner img {
   display: block;
-  width:100%;
+  width: 100%;
   margin: 0 auto 0 auto;
 }
 
@@ -592,17 +598,17 @@ html, body {
   left: 50%;
   top: 7vh;
   transform: translateX(-50%);
-  border:3px solid #000;
+  border: 3px solid #000;
   width: 100%;
   max-width: 700px;
-  background-color:#ebe1d8;
+  background-color: #ebe1d8;
   box-shadow: 5px 5px #000;
   border-radius: 5px;
-  padding:2px 2px 30px 2px;
+  padding: 2px 2px 30px 2px;
   box-sizing: border-box;
 }
 .modalTab {
-  margin-top:5px;
+  margin-top: 5px;
   position: relative;
 }
 .modalTab .list {
@@ -610,10 +616,10 @@ html, body {
 }
 .modalTab .list li {
   float: left;
-  border-left:2px solid #000;
-  border-right:2px solid #000;
-  border-top:2px solid #000;
-  border-bottom:2px solid #000;
+  border-left: 2px solid #000;
+  border-right: 2px solid #000;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
   box-sizing: border-box;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -621,27 +627,27 @@ html, body {
 }
 .modalTab .list li.active {
   font-weight: bold;
-  border-bottom:2px solid #ebcb87;
+  border-bottom: 2px solid #ebcb87;
   background-color: #ebcb87;
 }
-.modalTab .list li a { 
+.modalTab .list li a {
   display: block;
-  padding:8px 7px 5px 7px;
+  padding: 8px 7px 5px 7px;
 }
 .modalTab .tabBox {
   overflow: hidden;
-  margin-top:-2px;
+  margin-top: -2px;
 }
 .modalTab .tabBox .tabCont {
   display: none;
-  background-color:#ebcb87;
+  background-color: #ebcb87;
   padding: 30px 10px;
   box-sizing: border-box;
-  border:2px solid #000;
+  border: 2px solid #000;
   width: 100%;
-  border-top-right-radius:5px;
-  border-bottom-right-radius:5px;
-  border-bottom-left-radius:5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 .modalTab .tabBox .tabCont .tabFlexbox {
   display: flex;
@@ -650,25 +656,25 @@ html, body {
   margin-left: 30px;
 }
 .modalTab .tabBox .tabCont .tabFlexbox ul li {
-  margin-bottom:15px;
+  margin-bottom: 15px;
 }
 .tabContBtn {
   display: block;
-  background-color:#ebe1d8;
+  background-color: #ebe1d8;
   border: 2px solid #000;
   box-shadow: 3px 3px #000;
   border-radius: 5px;
-  padding:9px 5px 4px 5px;
-  width:130px;
+  padding: 9px 5px 4px 5px;
+  width: 130px;
   box-sizing: border-box;
-  text-align:center;
+  text-align: center;
   margin-left: auto;
-  font-size:16px;
-  font-weight:bold;
-  color:#000;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
 }
-.zIndex { 
-    z-index: 0;
+.zIndex {
+  z-index: 0;
 }
 .hidden {
   display: none;
@@ -679,48 +685,48 @@ html, body {
   position: absolute;
   left: 0%;
   top: 50vh;
-  border:3px solid #000;
+  border: 3px solid #000;
   width: 100%;
   max-width: 600px;
-  background-color:#ebe1d8;
+  background-color: #ebe1d8;
   box-shadow: 5px 5px #000;
   border-radius: 5px;
-  padding:2px;
+  padding: 2px;
   box-sizing: border-box;
 }
 .sliderWrap {
-  padding:10px 0;
+  padding: 10px 0;
 }
 .single-item {
   width: 100%;
   max-width: 800px;
-  margin:0 auto;
+  margin: 0 auto;
 }
 .single-item .item {
   width: 100%;
   padding: 0 70px;
   box-sizing: border-box;
 }
-.single-item .item img{ 
-  display: block; 
+.single-item .item img {
+  display: block;
   max-width: 400px;
   width: 100%;
-  margin:10px auto; 
-  border: 2px solid #000; 
-  border-radius: 5px; 
+  margin: 10px auto;
+  border: 2px solid #000;
+  border-radius: 5px;
   box-shadow: 5px 5px #000;
 }
-.slick-dots li{
-  display: inline-block; 
-  width: 10px; 
+.slick-dots li {
+  display: inline-block;
+  width: 10px;
   height: 10px;
-  margin: 0 5px; 
-  overflow: hidden; 
-  background: #eb6134; 
-  border-radius: 50%; 
-  transition: 0.3s; 
-  border:2px solid #000;
-  content:inherit;
+  margin: 0 5px;
+  overflow: hidden;
+  background: #eb6134;
+  border-radius: 50%;
+  transition: 0.3s;
+  border: 2px solid #000;
+  content: inherit;
 }
 .slick-dots li.slick-active {
   background: #333;
@@ -747,7 +753,6 @@ html, body {
 .slide_pagination .dot.dot_active { background: #333; }
 .slide_pagination .dot a { display: block; width: 100%; height: 100%; } */
 
-
 /* 모달6 (메모) */
 /* .modal6Box {
   position: absolute;
@@ -766,7 +771,7 @@ html, body {
 .stickyBox {
   position: absolute;
   left: 0;
-  top:0;
+  top: 0;
   width: 100%;
 }
 #stickies-container {
@@ -782,7 +787,7 @@ html, body {
 }
 .sticky {
   background: #ffe880;
-  border:2px solid #000;
+  border: 2px solid #000;
   border-radius: 5px;
   box-shadow: 3px 3px #000;
   color: #00243f;
@@ -821,9 +826,9 @@ html, body {
   position: absolute;
   right: 1rem;
   bottom: -45rem;
-  background-color:#fef6d3;
-  padding:5px;
-  border:3px solid #000;
+  background-color: #fef6d3;
+  padding: 5px;
+  border: 3px solid #000;
   border-radius: 5px;
   box-shadow: 5px 5px #000;
 }
@@ -871,23 +876,22 @@ button.button {
   margin-left: auto;
 }
 
-
 /* 모달7 (플레이리스트) */
 .modal7Box {
   position: absolute;
   right: 1rem;
   top: 2rem;
-  border:3px solid #000;
+  border: 3px solid #000;
   border-style: outset;
   width: 100%;
   max-width: 280px;
-  background-color:#ebe1d8;
+  background-color: #ebe1d8;
   box-shadow: 5px 5px #000;
   border-radius: 5px;
   padding: 5px 5px 10px 5px;
   /*overflow: hidden;*/
 }
-.listWrap { 
+.listWrap {
   padding: 0 10px;
 }
 .listWrap .listImg {
@@ -903,31 +907,31 @@ button.button {
   border-radius: 5px;
 }
 .listWrap .listCont {
-  margin-top:15px;
+  margin-top: 15px;
 }
 .listWrap .listCont p {
   font-size: 17px;
   font-weight: bold;
 }
 .listWrap .listCont .statusBox {
-  margin-top:6px;
+  margin-top: 6px;
 }
 .listWrap .listCont .statusBox .bar {
   width: 100%;
   height: 3px;
-  background-color:#000;
+  background-color: #000;
 }
 .listWrap .listCont .statusBox .dot {
   width: 5px;
   height: 5px;
   border-radius: 100%;
-  border:2px solid #000;
-  background-color:cornflowerblue;
-  margin-top:-6px;
+  border: 2px solid #000;
+  background-color: cornflowerblue;
+  margin-top: -6px;
   margin-left: 90%;
 }
 .listWrap .listCont .statusBox div:nth-child(3) {
-  margin-top:2px;
+  margin-top: 2px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -938,7 +942,7 @@ button.button {
 .listWrap .listCont .statusBox div:nth-child(4) {
   width: 100%;
   box-sizing: border-box;
-  margin-top:5px;
+  margin-top: 5px;
   display: flex;
   justify-content: space-between;
 }
@@ -950,42 +954,42 @@ button.button {
   transform: rotate(-180deg);
 }
 .listWrap .listCont .statusBox ul {
-  margin-top: 15px;
+  margin-top: 20px;
   display: flex;
-  justify-content: right;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 2px 0;
   box-sizing: border-box;
+}
+.listWrap .listCont .statusBox ul li {
+  width: 50%;
+  cursor: pointer;
+  border-radius: 15px;
+  text-align: center;
 }
 .listWrap .listCont .statusBox ul li:first-child {
-  margin-right: 20px;
-  border:2px solid #000;
-  padding:2px 15px;
-  border-radius: 15px;
-  cursor: pointer;
+  border: 2px solid #000;
 }
 .listWrap .listCont .statusBox ul li:last-child {
-  color:#fff;
-  background-color:#106a3a;
+  color: #fff;
+  background-color: #106a3a;
   border: 2px solid #106a3a;
-  padding:2px 15px;
-  border-radius: 15px;
   box-sizing: border-box;
-  cursor: pointer;
 }
-.listWrap .listCont .statusBox ul li:last-child:hover{
-  color:#106a3a;
+.listWrap .listCont .statusBox ul li:last-child:hover {
+  color: #106a3a;
   overflow: hidden;
   box-sizing: border-box;
   background-color: transparent;
 }
 
-
 /* ---------------모바일 버전--------------- */
-@media screen and (max-width:440px) {
+@media screen and (max-width: 440px) {
   .modal {
     position: absolute;
     width: 100%;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
   }
   /* 바탕화면 아이콘*/
   .icContainer {
@@ -998,7 +1002,9 @@ button.button {
   .icBox img {
     max-width: 80px;
   }
-  .icTxt {font-size:13px;}
+  .icTxt {
+    font-size: 13px;
+  }
 
   /*모달1 (컴퓨터) */
   .modal1Box {
@@ -1006,8 +1012,8 @@ button.button {
     max-width: 360px;
     position: relative;
     margin: 20px auto 0 auto;
-    left:inherit;
-    top:inherit;
+    left: inherit;
+    top: inherit;
     transform: inherit;
   }
 
@@ -1017,15 +1023,15 @@ button.button {
     max-width: 360px;
     position: relative;
     margin: 20px auto 0 auto;
-    left:inherit;
-    top:inherit;
+    left: inherit;
+    top: inherit;
     transform: inherit;
   }
-  .modalTopSkew .skewTab .tabBox ul{
+  .modalTopSkew .skewTab .tabBox ul {
     width: 280px;
   }
   .modalTopSkew .lineTab .iconArea {
-    width: 22%;  
+    width: 22%;
   }
   .modalTopSkew .lineTab .adressArea {
     width: 70%;
@@ -1050,13 +1056,13 @@ button.button {
     height: auto;
     position: relative;
     margin: 30px auto 0 auto;
-    left:inherit;
-    top:inherit;
+    left: inherit;
+    top: inherit;
     transform: inherit;
   }
   .modalMid .leftSpan {
-    padding:5px 3px;
-    font-size:14px;
+    padding: 5px 3px;
+    font-size: 14px;
   }
   .modalBot .modbotInner {
     padding: 30px 19px;
@@ -1068,19 +1074,19 @@ button.button {
     max-width: 360px;
     position: relative;
     margin: 20px auto 0 auto;
-    left:inherit;
-    top:inherit;
+    left: inherit;
+    top: inherit;
     transform: inherit;
   }
   .modalTab .tabBox .tabCont .tabFlexbox {
     display: block;
   }
-  .modalTab .tabBox{
-    margin-top:-3px;
+  .modalTab .tabBox {
+    margin-top: -3px;
   }
-  .modalTab .tabBox .tabCont .tabFlexbox ul{
+  .modalTab .tabBox .tabCont .tabFlexbox ul {
     margin-left: 0px;
-    margin-top:20px;
+    margin-top: 20px;
   }
 
   /* 모달5 */
@@ -1089,21 +1095,21 @@ button.button {
     max-width: 360px;
     position: relative;
     margin: 30px auto 0 auto;
-    left:inherit;
-    top:inherit;
+    left: inherit;
+    top: inherit;
     transform: inherit;
-  } 
-  .single-item .item img{
+  }
+  .single-item .item img {
     max-width: 280px;
   }
 
   /* 모달6 */
   .sticky-form {
-    top:19rem;
-    bottom:inherit;
+    top: 19rem;
+    bottom: inherit;
     transform: inherit;
   }
-  .sticky{
+  .sticky {
     margin-left: 2rem;
     width: 10rem;
   }
@@ -1114,16 +1120,16 @@ button.button {
     max-width: 250px;
     position: relative;
     margin: 6rem auto 0 auto;
-    left:inherit;
-    top:inherit;
+    left: inherit;
+    top: inherit;
     transform: inherit;
   }
 
-  .buddyBuddy{
-    position:relative;
+  .buddyBuddy {
+    position: relative;
     max-width: 340px;
     left: inherit;
-    top:inherit;
+    top: inherit;
     transform: inherit;
     margin: 20px auto 0 auto;
   }
@@ -1133,19 +1139,19 @@ button.button {
   .maintextLeft {
     width: 100%;
   }
-  .textleftCont{
+  .textleftCont {
     height: 140px;
   }
-  .maintextRight{
+  .maintextRight {
     width: 100%;
     height: 200px;
-    margin-top:10px;
+    margin-top: 10px;
   }
   .maintextRight .textrightDiv .textrightCont {
-    padding:0px;
+    padding: 0px;
   }
-  .maintextRight .textrightDiv .textrightCont img{
+  .maintextRight .textrightDiv .textrightCont img {
     max-width: 150px;
-    margin:0 auto;
+    margin: 0 auto;
   }
 }

@@ -8,7 +8,7 @@
 //   setTimeout(() => {
 //     loaderWrap.style.opacity = '0';
 //     html.style.overflow = 'auto';
-      
+
 //     setTimeout(() => {
 //       loaderWrap.style.display = 'none';
 //     }, 300);
@@ -32,33 +32,32 @@
 // setInterval(chargeLoading, 5000)
 
 // 시계
-const clock = document.getElementById("clock");
+const clock = document.getElementById('clock');
 function getClock() {
-    const date = new Date();
-    const hours = String(date.getHours()).padStart(2, "0");
-    const minutes = String(date.getMinutes()).padStart(2, "0");
+  const date = new Date();
+  const hours = String(date.getHours()).padStart(2, '0');
+  const minutes = String(date.getMinutes()).padStart(2, '0');
 
-    let msg = "";
-    if(date.getHours()>12){
-      msg += "pm";
-    }else{
-      msg += "am";
-    }
-    clock.innerText = `${msg} ${hours}:${minutes}`;
+  let msg = '';
+  if (date.getHours() > 12) {
+    msg += 'pm';
+  } else {
+    msg += 'am';
+  }
+  clock.innerText = `${msg} ${hours}:${minutes}`;
 }
 getClock();
 setInterval(getClock, 1000);
-
 
 //탭메뉴
 const tabList = document.querySelectorAll('.modalTab .list li');
 const contents = document.querySelectorAll('.modalTab .tabBox .tabCont');
 let activeCont = '';
 
-for(let i = 0; i < tabList.length; i++){
-  tabList[i].querySelector('.tabBtn').addEventListener('click', function(e){
+for (let i = 0; i < tabList.length; i++) {
+  tabList[i].querySelector('.tabBtn').addEventListener('click', function (e) {
     e.preventDefault();
-    for(let j = 0; j < tabList.length; j++){
+    for (let j = 0; j < tabList.length; j++) {
       tabList[j].classList.remove('active');
 
       contents[j].style.display = 'none';
@@ -71,78 +70,74 @@ for(let i = 0; i < tabList.length; i++){
   });
 }
 
-
 // 모달창
-let modals = document.getElementsByClassName("modal");
-let btns = document.getElementsByClassName("openBtn");
-let spanes = document.getElementsByClassName("closeBtn");
-let slider = document.getElementsByClassName("single-item");
+let modals = document.getElementsByClassName('modal');
+let btns = document.getElementsByClassName('openBtn');
+let spanes = document.getElementsByClassName('closeBtn');
+let slider = document.getElementsByClassName('single-item');
 let funcs = [];
 let index = 1;
 function Modal(num) {
-  return function() {
-    btns[num].onclick =  function() {
-        modals[num].style.display = "block";
-        modals[num].style.zIndex = index;
-        index++;
-         $('.single-item').get(0).slick.setPosition()
-        // console.log(num);
+  return function () {
+    btns[num].onclick = function () {
+      modals[num].style.display = 'block';
+      modals[num].style.zIndex = index;
+      index++;
+      $('.single-item').get(0).slick.setPosition();
+      // console.log(num);
     };
-    modals[num].onclick =  function() {
-        modals[num].style.zIndex = index;
-        index++;
+    modals[num].onclick = function () {
+      modals[num].style.zIndex = index;
+      index++;
     };
-    spanes[num].onclick = function() {
-        modals[num].style.display = "none";
+    spanes[num].onclick = function () {
+      modals[num].style.display = 'none';
     };
   };
-} 
+}
 
-for(let i = 0; i < btns.length; i++) {
+for (let i = 0; i < btns.length; i++) {
   funcs[i] = Modal(i);
 }
-for(let j = 0; j < btns.length; j++) {
+for (let j = 0; j < btns.length; j++) {
   funcs[j]();
 }
 
-
 // // 버디버디 쪽지 알람(모달)
-const open = () =>{
-  document.querySelector(".buddyAlarm").classList.add('showBuddy');
-}
-setTimeout(function() {
+const open = () => {
+  document.querySelector('.buddyAlarm').classList.add('showBuddy');
+};
+setTimeout(function () {
   open();
 }, 3000);
 
 const buddyOpen = () => {
-  document.querySelector(".modlaBuddy").classList.remove("hidden");
-  document.querySelector(".buddyAlarm").classList.remove("showBuddy");
-}
+  document.querySelector('.modlaBuddy').classList.remove('hidden');
+  document.querySelector('.buddyAlarm').classList.remove('showBuddy');
+};
 
 const buddyClose = (e) => {
-  document.querySelector(".buddyBuddy").classList.add("hidden");
+  document.querySelector('.buddyBuddy').classList.add('hidden');
   e.preventDefault();
-}
+};
 
-document.querySelector(".buddyAlarm").addEventListener("click", buddyOpen);
-document.querySelector(".buddyClose").addEventListener("click", buddyClose);
-
+document.querySelector('.buddyAlarm').addEventListener('click', buddyOpen);
+document.querySelector('.buddyClose').addEventListener('click', buddyClose);
 
 //타이핑
-const buddyText = "안녕하세요, 리액트 개발자를 꿈꾸는 \n김한빛입니다! \n저의 포트폴리오를 봐주셔서 감사해요\n*^___^*";
-const buddyPtag = document.querySelector(".buddyPtag");
-let i = 0; 
+const buddyText =
+  '안녕하세요, 리액트 개발자를 꿈꾸는 \n김한빛입니다! \n저의 포트폴리오를 봐주셔서 감사해요\n*^___^*';
+const buddyPtag = document.querySelector('.buddyPtag');
+let i = 0;
 
 function typing() {
   let txt = buddyText.charAt(i);
-  buddyPtag.innerHTML += txt==="\n" ?
-"<br />" : txt;
-  if(i < buddyText.length) {
+  buddyPtag.innerHTML += txt === '\n' ? '<br />' : txt;
+  if (i < buddyText.length) {
     i++;
   }
 }
 setInterval(typing, 200);
-
 
 // 버디버디 친구정보(모달)
 // const aboutMeOpen = () => {
@@ -155,22 +150,17 @@ setInterval(typing, 200);
 // document.querySelector(".aboutmeOpenBtn").addEventListener("click", aboutMeOpen);
 // document.querySelector(".aboutmeCloseBtn").addEventListener("click", aboutMeClose);
 
-
 //스티키 메모
-'use strict';
+('use strict');
 document.addEventListener('DOMContentLoaded', () => {
-  const stickyArea = document.querySelector(
-    '#stickies-container'
-  );
+  const stickyArea = document.querySelector('#stickies-container');
 
-  const createStickyButton = document.querySelector(
-    '#createsticky'
-  );
+  const createStickyButton = document.querySelector('#createsticky');
 
   const stickyTitleInput = document.querySelector('#stickytitle');
   const stickyTextInput = document.querySelector('#stickytext');
 
-  const deleteSticky = e => {
+  const deleteSticky = (e) => {
     e.target.parentNode.remove();
   };
 
@@ -195,11 +185,11 @@ document.addEventListener('DOMContentLoaded', () => {
       /<\/?[^>]+(>|$)/g,
       ''
     )}</h3><p>${stickyTextInput.value
-    .replace(/<\/?[^>]+(>|$)/g, '')
-    .replace(
-      /\r\n|\r|\n/g,
-      '<br />'
-    )}</p><span class="deletesticky">&times;</span>`;
+      .replace(/<\/?[^>]+(>|$)/g, '')
+      .replace(
+        /\r\n|\r|\n/g,
+        '<br />'
+      )}</p><span class="deletesticky">&times;</span>`;
     newSticky.classList.add('drag', 'sticky');
     newSticky.innerHTML = html;
     // newSticky.style.backgroundColor = randomColor();
@@ -239,16 +229,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function applyDeleteListener() {
-    let deleteStickyButtons = document.querySelectorAll(
-      '.deletesticky'
-    );
-    deleteStickyButtons.forEach(dsb => {
+    let deleteStickyButtons = document.querySelectorAll('.deletesticky');
+    deleteStickyButtons.forEach((dsb) => {
       dsb.removeEventListener('click', deleteSticky, false);
       dsb.addEventListener('click', deleteSticky);
     });
   }
 
-  window.addEventListener('mousedown', e => {
+  window.addEventListener('mousedown', (e) => {
     if (!e.target.classList.contains('drag')) {
       return;
     }
@@ -261,7 +249,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   window.addEventListener('mousemove', drag);
   window.addEventListener('mouseup', () => (isDragging = false));
-  
+
   createStickyButton.addEventListener('click', createSticky);
   applyDeleteListener();
 });
